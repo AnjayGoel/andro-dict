@@ -1,2 +1,2 @@
-# andr_dictionary
+# andro_dict
 An android dictionary app
