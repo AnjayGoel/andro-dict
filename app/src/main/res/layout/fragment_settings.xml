@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.anjay.dictionary.Settings">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/save"
+        android:layout_below="@+id/default_selector"
+        android:layout_alignEnd="@+id/default_selector"
+        android:layout_marginTop="37dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto Detect Languages"
+        android:id="@+id/lang_auto_detect_setting"
+        android:checked="false"
+        android:layout_below="@+id/quik_view_setting"
+        android:layout_alignStart="@+id/quik_view_setting" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use QuickView By Default"
+        android:id="@+id/quik_view_setting"
+        android:layout_marginTop="31dp"
+        android:checked="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/default_selector"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:spinnerMode="dialog" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Default Language"
+        android:id="@+id/textView2"
+        android:textColor="#000000"
+        android:layout_marginTop="57dp"
+        android:layout_below="@+id/auto_start_setting"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto Start At Startup"
+        android:id="@+id/auto_start_setting"
+        android:checked="false"
+        android:layout_below="@+id/lang_auto_detect_setting"
+        android:layout_alignStart="@+id/lang_auto_detect_setting" />
+</RelativeLayout>

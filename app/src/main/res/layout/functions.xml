@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:id="@+id/full">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:weightSum="99"
+        tools:layout_width="match_parent"
+        android:layout_weight="50"
+        android:layout_height="0dp"
+        android:id="@+id/half">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="33"
+            android:weightSum="20">
+
+            <Button
+                android:text=" Dictionary "
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:id="@+id/Dictionary"
+                android:layout_weight="10"
+                android:layout_width="0dp" />
+
+            <Button
+        android:text="Speak"
+                android:layout_height="match_parent"
+        android:layout_alignTop="@+id/Dictionary"
+                android:layout_marginEnd="0dp"
+        android:layout_marginTop="0dp"
+        android:id="@+id/speak"
+                android:layout_weight="10"
+                android:layout_width="0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:layout_weight="33"
+            android:weightSum="20">
+
+            <Button
+                android:text="Clipboard"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/bookmark"
+                android:layout_toEndOf="@+id/calc"
+                android:layout_marginTop="0dp"
+                android:id="@+id/clipboard"
+                android:layout_weight="10"
+                android:layout_width="0dp" />
+
+            <Button
+            android:text="Browser"
+                android:layout_height="match_parent"
+            android:layout_below="@+id/clipboard"
+            android:layout_alignStart="@+id/calc"
+            android:id="@+id/web"
+                android:layout_weight="10"
+                android:layout_width="0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="33"
+            android:weightSum="20">
+
+            <Button
+                android:text="Calc"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/speak"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:id="@+id/calc"
+                android:layout_weight="10"
+                android:layout_width="0dp" />
+
+            <Button
+                android:text="Bookmark"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/calc"
+                android:layout_alignStart="@+id/Dictionary"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:id="@+id/bookmark"
+                android:layout_weight="10"
+                android:layout_width="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

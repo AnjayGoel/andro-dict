@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00ffffff"
+    android:focusableInTouchMode="false">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:id="@+id/fullview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="100"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="2"
+            android:id="@+id/halfview"
+            android:background="@color/dict_background_color"
+            android:clickable="false">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+                android:baselineAligned="false"
+                android:id="@+id/headLayout"
+                android:clickable="false"
+                android:background="@color/dict_background_color">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/speakButton"
+                    android:layout_gravity="right"
+                    android:src="@drawable/pronounce"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:background="#00ffffff"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/Word_Box"
+                    android:layout_marginStart="15dp" />
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Word"
+                    android:id="@+id/Word_Box"
+                    android:textColor="#000000"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#00ffffff"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textIsSelectable="false"
+                    android:textStyle="italic"
+                    android:typeface="serif"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentEnd="false"
+                    android:textSize="16dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/close"
+                    android:src="@drawable/close"
+                    android:background="#00ffffff"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginLeft="3dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/up"
+                    android:id="@+id/toggle"
+                    android:background="#00ffffff"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/close"
+                    android:layout_marginLeft="3dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/back"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/back"
+                    android:background="#00ffffff" />
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/def_view"
+                android:fillViewport="true"
+                android:layout_weight="0.10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Meaning"
+                    android:id="@+id/def_view_text"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:background="@color/dict_background_color"
+                    android:textIsSelectable="true" />
+            </HorizontalScrollView>
+
+            <ScrollView
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/scroll_View"
+                android:fillViewport="true"
+                android:background="#ffffff"
+                android:layout_weight="0.60"
+                android:focusable="false">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dictBox"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textIsSelectable="true"
+                    android:text="Meaning"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:background="@color/dict_background_color" />
+            </ScrollView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/button_layout"
+                android:layout_weight="0.16"
+                android:measureWithLargestChild="false"
+                android:weightSum="100"
+                android:baselineAligned="false"
+                android:background="@color/dict_background_color">
+
+                <Button
+                    style="@style/button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Previous"
+                    android:id="@+id/prev"
+                    android:layout_weight="32"
+                    android:textColor="#000000" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Example"
+                    android:id="@+id/type"
+                    android:layout_weight="32"
+                    style="@style/button_style"
+                    android:textColor="#000000" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Next"
+                    android:id="@+id/next"
+                    android:layout_weight="32"
+                    android:paddingRight="3dp"
+                    style="@style/button_style"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.14"
+                android:weightSum="100"
+                android:id="@+id/translateLayout"
+                android:background="@color/dict_background_color">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="English"
+                    android:id="@+id/language"
+                    style="@style/button_style"
+                    android:textSize="14sp"
+                    android:layout_weight="40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="To"
+                    android:id="@+id/textView"
+                    android:layout_weight="20"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <Button
+                    style="@style/button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:id="@+id/lang_to_translate"
+                    android:textSize="14sp"
+                    android:layout_weight="40" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

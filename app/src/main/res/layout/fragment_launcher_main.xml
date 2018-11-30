@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.anjay.dictionary.Launcher_main">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/service_switch"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
